@@ -124,7 +124,7 @@ export default function SignIn() {
           <p className="text-center text-sm mt-4 text-gray-400">
             Don’t have an account?{" "}
             <span
-              onClick={()=>router.push("/signup")}
+              onClick={()=>router.push("/register")}
               className="text-blue-400 hover:underline hover:text-blue-300 transition"
             >
               Create one

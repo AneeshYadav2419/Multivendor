@@ -5,7 +5,7 @@ import Provider from "../../Provider";
 
 
 export const metadata: Metadata = {
-  title: "multicart",
+  title: "Multicart",
   description: "Multi-Vendor e-commerce website",
 };
 

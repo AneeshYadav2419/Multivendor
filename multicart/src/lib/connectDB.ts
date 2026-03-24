@@ -87,11 +87,12 @@ declare global {
   var mongoose: MongooseCache | undefined;
 }
 
+ //if connection have than reuse it otherwise bnao
 let cached: MongooseCache = global.mongoose || {
   conn: null,
   promise: null,
 };
-
+//first time save 
 if (!global.mongoose) {
   global.mongoose = cached;
 }

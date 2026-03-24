@@ -9,8 +9,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     providers: [
         Credentials({
             credentials: {
-                email: { label: "Email", type: "text" },
-                password: { label: "Password", type: "text" },
+                email: { label: "Email", type: "email" },
+                password: { label: "Password", type: "password" },
             },
             async authorize(credentials, request) {
 
@@ -89,10 +89,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         error:"/login"
 
     },
-    session:{
-        strategy:"jwt",
-        maxAge:10*24*60*60*1000
-    },
+   session:{
+    strategy:"jwt",
+    maxAge:10 * 24 * 60 * 60 // ✅ seconds
+},
     secret:process.env.AUTH_SECRET
 
 })

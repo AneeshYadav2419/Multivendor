@@ -24,7 +24,13 @@ export default function Register() {
     e.preventDefault()
     setLoading(true)
    try {
-    const result = await axios.post("/api/auth/register",{name , email , password})
+    // const result = await axios.post("/api/auth/register",{name , email , password})
+    const result = await axios.post("/api/auth/register",{
+  name,
+  email,
+  password,
+  role
+})
     console.log(result.data)
     setLoading(false)
     setName("")

@@ -25,7 +25,7 @@ import mongoose from "mongoose";
   rejectedReason?: string;
 
   /* -------------------- PRODUCT & ORDER REFERENCES -------------------- */
-  vendorProducts?: IProduct[]; // ✅ Products created by vendor
+  vendorProducts?: mongoose.Types.ObjectId[]; // ✅ Products created by vendor
   orders?: mongoose.Types.ObjectId[];         // ✅ Orders placed by user
 
   /* -------------------- CART DATA -------------------- */
@@ -69,7 +69,7 @@ const userSchema = new mongoose.Schema<IUser>(
 
     /* ---------------- VENDOR INFO ---------------- */
     shopName: { type: String },
-    businessAddress: { type: String },
+    businessAddress: { type: String }, //jaaatatttttttatatatatatta
     gstNumber: { type: String },
 
     isApproved: { type: Boolean, default: false },
